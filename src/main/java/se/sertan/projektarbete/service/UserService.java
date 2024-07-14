@@ -1,23 +1,5 @@
 package se.sertan.projektarbete.service;
 
-/*
-Info om UserService, @Service annotationen är lite svår att förklara man kan säga att denna class "servar" Users
-
-Vi börjar med att injecta metoder från UserRepository med hjälp av @Autowired
-Vi gör samma med passwordEncoder.
-Dessa två är våra "dependencies" man kan säga att det är metoder som vår class är "dependent" av för att fungera som den ska.
-
-Vissa metoder har @Transactional annotationen detta betyder att vi ser till så att allt i databasen faktiskt uppdateras om något failar så failas allt så att inget konstigt händer
-i våran databas.
-
-Eftersom vi använde oss av extends JpaRepository i Vår Repository har vi tillgång till metoder som .save .delete mm
-
-metoderna I denna class är ganska självförklarande, registerUser  så sparar vi ser en ny user i våran databas, deleteUser tar bort en användare, updateUserPassword upadterar vi
-lösenordet, vi kollar först om användaren finns i databasen förståss.
-
-
- */
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
