@@ -1,0 +1,11 @@
+se\sertan\projektarbete\config\DatabaseConfig.class
+se\sertan\projektarbete\ProjektarbeteApplication.class
+se\sertan\projektarbete\ProjektarbeteController.class
+se\sertan\projektarbete\entity\AppUser.class
+se\sertan\projektarbete\service\UserService.class
+se\sertan\projektarbete\repository\UserRepository.class
+se\sertan\projektarbete\config\SecurityConfig.class
+se\sertan\projektarbete\web\UserDTO.class
+se\sertan\projektarbete\entity\Role.class
+se\sertan\projektarbete\service\CustomUserDetailsService.class
+se\sertan\projektarbete\repository\RoleRepository.class

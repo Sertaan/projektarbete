@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Admin Panel</title>
+</head>
+<body>
+<h1>Welcome Admin</h1>
+<p>Here is all the information.</p>
+<ul>
+  <li><a th:href="@{/addUser}">Add User</a></li>
+  <li><a th:href="@{/deleteUser}">Delete User</a></li>
+  <li><a th:href="@{/updateUser}">Update User</a></li>
+  <li><a th:href="@{/logout}">Logout</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+</head>
+<body>
+<button id="deleteBtn">Delete User</button>
+
+<script>
+    // Funktion för att radera användare
+    function deleteUser(userId) {
+        if (confirm('Är du säker på att du vill radera användaren?')) {
+            fetch(`/api/users/${userId}`, {
+                method: 'DELETE'
+            }).then(response => {
+                if (response.ok) {
+                    alert('Användaren raderades framgångsrikt');
+                } else {
+                    alert('Raderingen misslyckades');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    }
+
+    // Lägg till en event listener för delete-knappen
+    document.getElementById('deleteBtn').addEventListener('click', function() {
+        const userId = prompt('Ange ID på användaren du vill radera:');
+        if (userId) {
+            deleteUser(userId);
+        }
+    });
+</script>
+</body>
+</html>
